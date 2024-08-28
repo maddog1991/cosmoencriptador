@@ -1,0 +1,334 @@
+/*---- Fuente ----*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*---- Varibles Globales CSS ----*/
+:root{
+    --Font:#E5E5E5;
+    --White:#ffffff;
+    --Dark-Red:#a93226;
+    --Gray:#C5C5C5;
+    --Dark-Blue:#0A3871;
+    --Medium-Gray:#67808E;
+    --Black:#010101;
+    --Medium-Blue:#a7cff7;
+    --Dark-Gray:#343a40;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter'; 
+    text-decoration: none;
+    background: var(--White);
+}
+
+::selection{
+    background: var(--Dark-Red);
+    color: var(--White);
+}
+
+body{
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*---- Cabecera ----*/
+
+header{
+    position: absolute;
+    margin: 70px 0px 0px 70px;
+}
+
+
+header .alura{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+/*---- Cuerpo ----*/
+main{
+    display: flex;
+    flex-direction: row;
+    background: url(../imagenes/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.encriptacion{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+.encriptar{
+    width: 70%;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--Gray) ;
+    border-radius: 15px;
+    resize: none;
+}
+
+.encriptar::placeholder,:focus{
+    color: var(--Dark-Blue);
+}
+
+.aviso-encriptar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+}
+
+.advertencia{
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--Dark-Blue);    
+}
+
+.botones-encriptar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+}
+
+.boton-encriptar{
+    width: 330px;
+    height: 69px;
+    padding: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--White);
+    background: var(--Dark-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px --5px var(--Black);
+}
+.boton-copiar,
+.boton-encriptar:active{
+    box-shadow: inset 3px 3px 6px var(--Medium-Gray) ;
+    inset: -4px -6px 10px var(--Dark-Blue);
+    color: var(--Font);
+    
+}
+
+.boton-desencriptar{
+    width: 330px;
+    height: 69px;
+    padding: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--Dark-Blue);
+    background: var(--Medium-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px --5px var(--Black);
+}
+
+
+.boton-desencriptar:active{
+    box-shadow: inset 3px 3px 6px var(--Medium-Gray) ;
+    inset: -4px -6px 10px var(--Dark-Blue);
+    color: var(--Font);    
+}
+
+.salida{
+    width: 400px;
+    height: 750px;
+    background: var(--Font);
+    box-shadow: 12px 25px 34px -10px var(--Dark-Gray);
+    position: relative;
+    margin-top: 45px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.salida-contenedor{
+    width: 300px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--Font);
+}
+
+.muñeco{
+    background: var(--Font);
+}
+
+.p-texto{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Dark-Blue);
+    background: var(--Font);
+}
+
+.s-texto{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Medium-Gray);
+    background: var(--Font);
+}
+
+.evalua{
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400px;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Medium-Gray);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evalua:focus{
+    outline: none;
+
+}
+
+.boton-copiar{
+    width: 225px;
+    height: 30px;
+    margin: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden; 
+    padding: 4px;
+    font-size: 25px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--Medium-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 20px ;
+    cursor: pointer;
+}
+
+.boton-encriptar:hover,
+.boton-desencriptar:hover,
+.boton-copiar:hover{
+    transform: scale(0.95);
+}
+
+/*---- Pie de Pagina ----*/
+footer{
+    margin-top: 17px;
+    padding: 12px;
+    border-top: 4px solid var(--Font);
+    color: var(--Gray) ;
+    text-align: center;
+    height: 6px;
+    font-size: 20px;
+    font-weight: 700px;
+    color: var(--Dark-Gray);
+}
+
+.github:hover{
+    color: var(--Font);
+    opacity: 0.10;
+}
+
+.linkedin:hover{
+    color: var(--Font);
+    opacity: 0.10;
+}
+
+/*---- responsivo ----*/
+@media(max-width: 1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;        
+    }
+
+    .encriptacion{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .botones-encriptar{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .botones-encriptar{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .aviso-encriptar{
+        position: inherit;
+        margin: 17px;
+    }
+
+    .salida{
+        width: 670px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .salida-contenedor{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .muñeco{
+        display: none;
+    }
+}
+@media(max-width: 720px){
+ 
+    
+}
